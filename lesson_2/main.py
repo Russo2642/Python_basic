@@ -19,8 +19,10 @@
 # тип данных int не итерируемый 
 
 
-a = int(input('введите число: '))
-
-for i in range(a):
-    if i % 2 == 0:
-        print(i)
+# git config --global user.name ''
+# git config --global user.email ''
+# git init - создаем один раз !
+# git status 
+# git add - добавляем файлы в систему git (git add . - закинуть все файлы)
+# git commit -m 'Комментарий'
+# git push origin <branch_name>

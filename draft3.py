@@ -1,3 +1,5 @@
+# import random
+
 # right_answers = 0
 # wrong_answers = 0
 
@@ -43,19 +45,19 @@ question1 = input("what you study?:")
 question2 = input("who is teacher?:")
 question3 = input("who says meow?:")
 
-if question1 == answers[0]:
+if question1.lower() == answers[0].lower():
     print("you are right")
     right_answers=right_answers+1
 else:
     print("fault")
     wrong_answers=wrong_answers+1
-if question2 == answers[1]:
+if question2.lower() == answers[1].lower():
     print('you are right')
     right_answers=right_answers+1
 else:
     print("fault")
     wrong_answers=wrong_answers+1
-if question3 == answers[2]:
+if question3.lower() == answers[2].lower():
     print("you are right")
     right_answers=right_answers+1
 else:
@@ -64,3 +66,5 @@ else:
 
 print("\ntotal of right answers:", right_answers)
 print("\ntotal of wrong answers", wrong_answers)
+
+

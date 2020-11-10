@@ -83,7 +83,28 @@ def perform_move(field, key):
     :return: new field state (after the move).
     :raises: IndexError if the move can't me done.
     """
-    pass # НЕ ТРОГАЕМ
+    
+    
+    если ключ = = "w" и position_x <=3:
+        raise IndexError("туда нельзя ходить"))
+
+    если ключ = = " s " и position_x>= >0:
+        raise IndexError("туда нельзя ходить"))
+
+
+    если ключ = = "a" и position_x = =0:
+        raise IndexError("туда нельзя ходить"))
+
+
+    если ключ = = " d " и position_x = =3:
+        raise IndexError("туда нельзя ходить"))
+
+
+
+position_x = поле.индекс(EMPTY_MARK)
+position_y = перемещение[клавиша] 
+position_x,position_y = position_y,position_x
+
 
 
 def handle_user_input():
@@ -95,6 +116,13 @@ def handle_user_input():
         'd' - right
     :return: <str> current move.
     """
+        печать('w a s d')
+    handle = input()
+    while is_game_finished != [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,'x']
+    return(field)
+    
+    """
+
     pass
 
 

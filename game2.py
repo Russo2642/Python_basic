@@ -1,6 +1,6 @@
 import random
 
-WordList = ['самолет', 'поезд', 'путешествие', 'виселица']
+WordList = ['viselica', 'samolet', 'more', 'kacheli']
 #случайный выбор слов 
 start = input("Ugadaite slovo. U vas est' 12 popytok! Pristupim?: ")
 if start == 'da':
@@ -51,14 +51,14 @@ def playAgain():
     print('Хотите попробовать еще раз? ("DA"или "NET")')
     return input().lower().startswith('DA')
 
-print('В И С Е Л И Ц А')
-missedletters=''
-correctletters=''
-secretWord = getRandomWord(words)
+print()
+missedletters=' '
+correctletters=' '
+secretWord = getRandomWord(WordList)
 gameIsDone = False
 
 while True:
-    displayBoard(Viselica, missedletters, correctletters, secretWord)
+    displayBoard(missedletters, correctletters, secretWord)
 
 #Вычисляем количество букв которые ввел игрок
 guess = getGuess(missedletters+correctletters)
@@ -76,10 +76,11 @@ for i in range(len(secretWord)):
             print('Превосходно! Вы отгадали загаданное слово!')
 
         gameIsDone = True
-        else: missedletters = missedletters + guess
+else:
+    missedletters = missedletters + guess
 
 #Проверка условия проигрыша
-if len(missedletters) == len(Viselica)
+if len(missedletters) == len(Viselica):
     displayBoard(Viselica, missedletters, correctletters, secretWord)  
     print('У вас не осталось попыток')
 
@@ -89,3 +90,26 @@ if len(missedletters) == len(Viselica)
             correctletters = ''
             gameIsDone = False
             secretWord = getRandomWord(WordList)
+
+#333
+attempts = 12
+WORD = ['АПЕЛЬСИН', 'МАНДАРИН', 'ЯБЛОКО', 'АНАНАС', 'ВИШНЯ'].strip(' ').lower()
+Splitted_word = list(WORD)
+count_of_chars = len(Splitted_word)
+guessed = ['_' for i in range(count_of_chars)]
+
+while True:
+    print(' '.join(guessed))
+    print('Attempts: ', attempts)
+    char = input('Enter letter: ').strip(' ').lower()
+    if char in splitted_word:
+        for i, c in enumerate(Splitted_word):
+            if c == char:
+                guessed[i] = char
+    else:
+        attempts -= 1
+    if attempts == 0:
+        print('Vy proigrali')
+        break
+
+print(' '.join(guessed))

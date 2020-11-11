@@ -16,32 +16,78 @@ WORDS = ['Python', 'машина', 'строка']
 # random.choice(WORDS)
 
 computer = random.choice(WORDS)
-# a = random.choice(WORDS)
-# zdes risuem probely
+zamena = "_"
 
-def write_space():
-    word = []
-    if len(computer)>0:
-        word.append(computer)
-        return word.insert[0,"_"]
-    write_space()
+# # zdes risuem probely
 
-# tut vvdodim bukvy i menyaem mestami s probelom
+# def write_space():
+    
+    # for elements, item in enumerate(computer):
+    #     computer[elements] = zamena
+          
+    # return computer
+        
 
-def write_word():
-    user_input = input("write some word:")
-    for element in write_space:
-        if user_input == computer:
+# # tut vvdodim bukvy i menyaem mestami s probelom
 
-# tut otvechaem za kolichestvo popytok
+# def write_word():
+#     user_input = input("write some letter:")
+#     if user_input in enumerate(computer):   # in wordd
+#            user_input,zamena = zamena,user_input   #????
+#     return computer
+        
+        
+        
+
+# # tut otvechaem za kolichestvo popytok
            
-def user_try():
+# def user_try(user_input):
+#     try_1 = 0
+#     while user_input<12:
+#         try_1+=1
+#         if user_input not in enumerate(computer):
+#             print("no such letters")
+
+
+# logika igry
+        
+
+def return_random_word():
+    return random.choice(WORDS) 
+
+def hangle_user_input():
+    letter = input("write some letter:")
+    return letter
+
+def get_initial_statuses(word):
+    for elements, item in enumerate(computer):
+        computer[elements] = zamena
+          
+    return computer
+
+def is_game_finished(statuses, current_errors,letter):
     try_1 = 0
-    while user_input<12:
+    while letter<12:
         try_1+=1
-        if user_input!=computer:
-            print("no such letters")
-        if user_input==computer:
-    user_input()
+        
+
+def person_check_action(word,statuses,letter):
+    if letter not in word:
+        return False
+    for computer, l in enumerate(word):
+        if letter ==l:
+            statuses[computer] = True
+        return True
+
+def print_word(word,statuses):
+
+
+def main():
+    
+    word = return_random_word()
+    statuses = get_initial_statuses(word)
+    while not is_game_finished():
+        letter = hangle_user_input
+
 
 

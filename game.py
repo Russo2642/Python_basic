@@ -62,7 +62,8 @@ def is_game_finished(field):
     :param field: current field state.
     :return: True if the game is finished, False otherwise.
     """
-    pass
+    field=list(range(1, 16))
+    field.append(EMPTY_MARK)
 
 
 def perform_move(field, key):
@@ -73,28 +74,30 @@ def perform_move(field, key):
     :return: new field state (after the move).
     :raises: IndexError if the move can't me done.
     """
-    
+    position_x = field.index(EMPTY_MARK)
  
 
     if key == "w" and position_x <=3:
         raise IndexError("not allowed to go there")
    
-    if key == "s" and position_x>=0:
+    elif key == "s" and position_x>=12:
         raise IndexError("not allowed to go there")
   
    
-    if key == "a" and position_x ==0:
+    elif key == "a" and position_x%4 ==0:
         raise IndexError("not allowed to go there")
    
    
-    if key == "d" and position_x ==3:
+    elif key == "d" and position_x%4 ==3:
         raise IndexError("not allowed to go there")
     
   
 
-position_x = field.index(EMPTY_MARK)
-position_y = MOVES[key]  
-position_x,position_y = position_y,position_x
+
+    position_y = MOVES[key]  
+    new_index = position_x + position_y
+    field[position_x], field[new_index] = field[new_index],field[position_x]
+    return field
 
 def handle_user_input():
     """
@@ -105,7 +108,12 @@ def handle_user_input():
         'd' - right
     :return: <str> current move.
     """
-    pass
+    print('w a s d')
+    handle = input()
+    while handle not in MOVES:
+        handle = input()
+
+    return(handle)
 
 
 def main():

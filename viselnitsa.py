@@ -22,12 +22,76 @@ if index1 == 0:
     print('-'*len(list1))
     skritiy_text = list('-'*len(list1))
     print(skritiy_text)
+    # def graphika(list1,skritiy_text):
+    #     for list1 in skritiy_text:
+    #         print(list1)
+            
+
+    # raphika(list1,skritiy_text)
+
+
     def prav_vvod(list1,skritiy_text):
         prav_vvod_bukva = input()
-        i = [0,1,2,3,4,5,6,7,8,9,10]
-        if prav_vvod_bukva == list1[list1.index(prav_vvod_bukva)]:
-            print(skritiy_text.insert(list1.index(prav_vvod_bukva),prav_vvod_bukva))
+        spisok_vvoda = []
+        
+         
+        t = 0
+        while t < 10:
+            if prav_vvod_bukva in list1:
+                print('molodets')
+                t = t +1
+                spisok_vvoda.append(prav_vvod_bukva)
+                
+            elif prav_vvod_bukva not in list1:
+                print('try again')
+                print(str(10 - 1) ,'попыток осталось')
+                t = t + 1
+
+            elif len(result(set(list1 and set(spisok_vvoda))))== len(list1):
+                print('ТЫ УГАДАЛ СЛОВО')
+                t = 10
+        print(spisok_vvoda)
     prav_vvod(list1,skritiy_text)
+
+    def main():
+    main()
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        # prav_vvod_bukva = input()
+        
+       
+    #       
+            
+        
+    #         if prav_vvod_bukva in list1:
+    #             print("molodets")
+    #             t = t + 1
+            
+    #             # print(skritiy_text.insert(index(list1),prav_vvod_bukva))
+    #         elif prav_vvod_bukva not in list1:
+    #             print('try again,this letters doesn\'t belong to word')
+
+    #             t = t + 1
+    #         elif len(result=list(set(list_vvod) and set(list1))) == len(list1):
+    #             print('ti viigral')
+
+    #             break 
+    #     print(list_vvod)
+    # prav_vvod(list1,skritiy_text)
+    # def main():
+    # main()
+        
+
+
+
+
         
         
         # for bukvi in list1: 

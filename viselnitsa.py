@@ -19,42 +19,111 @@ if index1 == 0:
     list1 = list(word)
     print(len(list1))
     print("~"*20)
-    print('-'*len(list1))
-    skritiy_text = list('-'*len(list1))
+    # print('-'*len(list1))
+    skritiy_text = list('_'*len(list1))
     print(skritiy_text)
-    # def graphika(list1,skritiy_text):
-    #     for list1 in skritiy_text:
-    #         print(list1)
+   
+    spisok_vvoda = []
+    prav_vvod_bukva = input()
+
+    def prav_vvod(list1,skritiy_text,spisok_vvoda,prav_vvod_bukva):
+        spisok_vvoda.append(prav_vvod_bukva)
+    prav_vvod(list1,skritiy_text,spisok_vvoda,prav_vvod_bukva)
+
+
+    def graphika(skritiy_text,spisok_vvoda,list1,prav_vvod_bukva):
+        # result = list(set(list1) and set(spisok_vvoda))
+        # prav_vvod_bukva_sp = list(prav_vvod_bukva)
+        # skritiy_text.insert(,prav_vvod_bukva_sp)
+        for i in list1:
+            if prav_vvod_bukva == list1:
+                print('ti ugadal bukvu')
+                print(skritiy_text.insert)
+                result = set(list1) and set(spisok_vvoda)
+                print(result.index)
+                print(skritiy_text.insert(result.index,prav_vvod_bukva))
             
 
-    # raphika(list1,skritiy_text)
+    graphika(skritiy_text,spisok_vvoda,list1,prav_vvod_bukva)
 
+    def is_game_finished(list1,spisok_vvoda):
+        list1 == spisok_vvoda
+        if list1 == spisok_vvoda:
+            print(list1)
+            print('molodets')
+    is_game_finished(list1,spisok_vvoda)
 
-    def prav_vvod(list1,skritiy_text):
-        prav_vvod_bukva = input()
-        spisok_vvoda = []
-        
-         
-        t = 0
-        while t < 10:
-            if prav_vvod_bukva in list1:
-                print('molodets')
-                t = t +1
-                spisok_vvoda.append(prav_vvod_bukva)
-                
-            elif prav_vvod_bukva not in list1:
-                print('try again')
-                print(str(10 - 1) ,'попыток осталось')
-                t = t + 1
+    
 
-            elif len(result(set(list1 and set(spisok_vvoda))))== len(list1):
-                print('ТЫ УГАДАЛ СЛОВО')
-                t = 10
-        print(spisok_vvoda)
-    prav_vvod(list1,skritiy_text)
 
     def main():
+        t = 0
+        while not is_game_finished:
+            prav_vvod_bukva = input()
+            spisok_vvoda = []
+            spisok_vvoda = prav_vvod()
+        while t < 10:
+            prav_vvod_bukva = input()
+            t = t + 1
+        if spisok_vvoda == list1:
+            print('ti viigral')
+            exit
     main()
+
+
+
+          
+
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #     t = 0
+    #     while t < 10:
+    #         if prav_vvod_bukva in list1:
+    #             print('molodets')
+    #             t = t +1
+    #             spisok_vvoda.append(prav_vvod_bukva)
+                
+    #         elif prav_vvod_bukva not in list1:
+    #             print('try again')
+    #             print(str(10 - 1) ,'попыток осталось')
+    #             t = t + 1
+
+    #         elif len(result(set(list1 and set(spisok_vvoda))))== len(list1):
+    #             print('ТЫ УГАДАЛ СЛОВО')
+    #             t = 10
+    #     print(spisok_vvoda)
+    # prav_vvod(list1,skritiy_text)
+
+    # def main():
+    # main()
       
       
       

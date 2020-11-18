@@ -12,44 +12,12 @@
 
 import random
 
-WORDS = ['Python', 'машина', 'строка']
+WORDS = ['python', 'glo', 'iqos']
 # random.choice(WORDS)
 
-computer = random.choice(WORDS)
+word = random.choice(WORDS)
 zamena = "_"
 
-# # zdes risuem probely
-
-# def write_space():
-    
-    # for elements, item in enumerate(computer):
-    #     computer[elements] = zamena
-          
-    # return computer
-        
-
-# # tut vvdodim bukvy i menyaem mestami s probelom
-
-# def write_word():
-#     user_input = input("write some letter:")
-#     if user_input in enumerate(computer):   # in wordd
-#            user_input,zamena = zamena,user_input   #????
-#     return computer
-        
-        
-        
-
-# # tut otvechaem za kolichestvo popytok
-           
-# def user_try(user_input):
-#     try_1 = 0
-#     while user_input<12:
-#         try_1+=1
-#         if user_input not in enumerate(computer):
-#             print("no such letters")
-
-
-# logika igry
         
 
 def return_random_word():
@@ -60,27 +28,30 @@ def hangle_user_input():
     return letter
 
 def get_initial_statuses(word):
-    for elements, item in enumerate(computer):
-        computer[elements] = zamena
+    for elements, item in enumerate(word):
+        word[elements] = zamena
           
-    return computer
+    return word
 
 def is_game_finished(statuses, current_errors,letter):
-    try_1 = 0
-    while letter<12:
-        try_1+=1
+    current_errors = 0
+    while current_errors<12:
+        current_errors+=1
+
+    return statuses
         
 
 def person_check_action(word,statuses,letter):
     if letter not in word:
         return False
-    for computer, l in enumerate(word):
+    for statuses, l in enumerate(word):
         if letter ==l:
-            statuses[computer] = True
+            statuses[word] = True
         return True
 
 def print_word(word,statuses):
-
+    
+ 
 
 def main():
     
@@ -88,6 +59,14 @@ def main():
     statuses = get_initial_statuses(word)
     while not is_game_finished():
         letter = hangle_user_input
+        print_word(word,statuses)
+
+if __name__ == '__main__':
+
+    main()
+        
+        
+        
 
 
 

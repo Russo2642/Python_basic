@@ -12,6 +12,10 @@ def add_board():
     Создание игральной доски
     :return: доска для игры
     """
+    board = []
+    for i in range(COUNT):
+        board.append(EMPTY)
+    return board
 
 
 def write_board(board):
@@ -34,14 +38,16 @@ def pieces():
     """
     
 
-
 def human_step(board):
     """
     Получение хода человека
     :param board: доска
     :return: поле
     """
-    
+    step = None
+    moves = legal_moves(board)
+    while step not in moves:
+        step = int(input('Ход: '))
 
 
 def computer_step(board, computer, human):
@@ -51,7 +57,6 @@ def computer_step(board, computer, human):
     :return: поле
     """
     
-
 
 def winner(board):
     """
@@ -71,15 +76,17 @@ def winner(board):
     )
     
 
-
 def legal_moves(board):
     """
     Создает список доступных ходов
     :param board: доска
     :return: список ходов
     """
-    
-
+    new_var = []
+    for i in range(COUNT):
+        if board[i] == EMPTY:
+            new_var.append(i)
+    return new_var
 
 def next_turn(turn):
     """
@@ -87,6 +94,10 @@ def next_turn(turn):
     :param turn: значение хода
     :return:
     """
+    if turn == EQ_X:
+        return EQ_O
+    else:
+        return EQ_X
     
 
 def main():
@@ -103,7 +114,27 @@ def main():
     ---------
     6 | 7 | 8
     """)
-    
+    human, computer = pieces()
+    turn = EQ_X
+    board = add_board()
+    write_board(board)
+    while not winner(board):
+        if turn == human:
+            step = human_step(board)
+            board[step] = human
+        else:
+            step = computer_step(board, computer, human)
+            board[step] = computer
+        write_board(board)
+        turn = next_turn(turn)
+        theWinner = winner(board)
+    if theWinner == computer:
+        print('Computer wins')
+    else:
+        print('You win')
+
+
+
 
 
 if __name__ == '__main__':

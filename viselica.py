@@ -28,8 +28,9 @@ def hangle_user_input():
     return letter
 
 def get_initial_statuses(word):
-    for elements, item in enumerate(word):
-        word[elements] = zamena
+    for elements, zamena in enumerate(word):
+        if len(word)>0:
+            len(word)*zamena
           
     return word
 
@@ -50,6 +51,7 @@ def person_check_action(word,statuses,letter):
         return True
 
 def print_word(word,statuses):
+    print(word)
     
  
 
@@ -59,6 +61,8 @@ def main():
     statuses = get_initial_statuses(word)
     while not is_game_finished():
         letter = hangle_user_input
+        if letter in word:
+            person_check_action()
         print_word(word,statuses)
 
 if __name__ == '__main__':

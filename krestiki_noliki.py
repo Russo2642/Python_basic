@@ -166,7 +166,7 @@ def main():
             board[step] = human
         else:
             step2 = computer_step(board)
-            board[step2] = computer
+            board[step2]= computer
         write_board(board)
         turn = next_turn(turn)
         theWinner = winner(board)

@@ -39,11 +39,11 @@
 #print("your name:{},\nyour age:{},\nyour city:{}". format(a,b,c))
 
 
-a=input("a:")
-b=input("b:")
-c=input("c:")
+# a=input("a:")
+# b=input("b:")
+# c=input("c:")
 
-if a>b or a>c or b>c:
-    print("a bolshe vseh")
-else:
-    print("a menshe vseh, no c bolshe vseh")
+# if a>b or a>c or b>c:
+#     print("a bolshe vseh")
+# else:
+#     print("a menshe vseh, no c bolshe vseh")
